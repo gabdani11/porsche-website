@@ -6,7 +6,8 @@ const Hero = () => {
   return (
     <section className='heroSection'>
         <Navbar/>
-        <div className="imgContainer">
+        <div className="heroSection">
+          <div className="imgContainer">
           <img className='heroImg1' 
           src="https://ik.imagekit.io/rhuubreuu/porsche-website/cosmos_382284989.webp" alt="heroSectionImg" loading='lazy' />
           <img className='heroImg2'
@@ -16,6 +17,9 @@ const Hero = () => {
           <img className='heroImg4'
           src="https://ik.imagekit.io/rhuubreuu/porsche-website/cosmos_1674367478.webp" alt="heroSectionImg" loading='lazy' />
         </div>
+
+        </div>
+        
     </section>
   )
 }

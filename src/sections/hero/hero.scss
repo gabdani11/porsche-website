@@ -1,3 +1,6 @@
+@mixin area($name){
+    grid-area: $name;
+}
 .heroSection{
 
     img{
@@ -5,10 +8,16 @@
         object-fit: cover;
 
     }
-    .imgContainer{
-        width: 60%;
+    .heroSection{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         max-width: 1600px;
-        margin: auto;
+        margin: 0 auto;
+        
+    .imgContainer{
+        width: 100%;
+        height: 100%;
         display: grid;
         grid-template-areas:"a b b"
                             "a c d";
@@ -16,24 +25,26 @@
         gap: 1rem;
 
         .heroImg1{
-            grid-area: a;
+            @include area(a);
             
 
         }
         .heroImg2{
-            grid-area: b;
+            @include area(b);
             transform: scaleY(-1);
             transform-origin: center;
             
         }
         .heroImg3{
-            grid-area: c;
+            @include area(c);
             align-self: end;
             
         }
         .heroImg4{
-            grid-area: d;
+            @include area(d);
             align-self: end;
          }
     }
+}
+    
 }
