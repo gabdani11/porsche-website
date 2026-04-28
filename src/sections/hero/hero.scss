@@ -1,0 +1,39 @@
+.heroSection{
+
+    img{
+        width: 100%;
+        object-fit: cover;
+
+    }
+    .imgContainer{
+        width: 60%;
+        max-width: 1600px;
+        margin: auto;
+        display: grid;
+        grid-template-areas:"a b b"
+                            "a c d";
+        grid-template-columns: 3fr 1fr 1fr;
+        gap: 1rem;
+
+        .heroImg1{
+            grid-area: a;
+            
+
+        }
+        .heroImg2{
+            grid-area: b;
+            transform: scaleY(-1);
+            transform-origin: center;
+            
+        }
+        .heroImg3{
+            grid-area: c;
+            align-self: end;
+            
+        }
+        .heroImg4{
+            grid-area: d;
+            align-self: end;
+         }
+    }
+}
