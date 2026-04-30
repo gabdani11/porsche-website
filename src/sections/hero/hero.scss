@@ -1,19 +1,24 @@
+@use '../../assets/fonts/fonts.scss';
 @mixin area($name){
     grid-area: $name;
 }
+
 .heroSection{
+    
 
     img{
         width: 100%;
         object-fit: cover;
 
     }
-    .heroSection{
+    .centerContainer{
         display: flex;
         align-items: center;
         justify-content: center;
-        max-width: 1600px;
-        margin: 0 auto;
+        max-width: 1000px;
+        margin: auto;
+        width: calc(100vw - 10%);
+        
         
     .imgContainer{
         width: 100%;
@@ -22,6 +27,8 @@
         grid-template-areas:"a b b"
                             "a c d";
         grid-template-columns: 3fr 1fr 1fr;
+        
+        
         gap: 1rem;
 
         .heroImg1{
@@ -44,6 +51,40 @@
             @include area(d);
             align-self: end;
          }
+    }
+}
+//subHeading Porsche
+.subHeading{
+    position: relative;
+    margin-bottom: clamp(2rem, 10vw, 22rem);
+    h1{
+        font-size: clamp(5rem, 25vw, 22rem);
+        text-align: center;
+    }
+    img{
+        width: 40%;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        max-width: 900px;
+
+    }
+    
+}
+//Responsive
+@media (max-width:768px)
+{
+    .centerContainer{
+        width: 90%;
+        .imgContainer{
+            grid-template-areas:"a a"
+                                "c d";
+                                
+            grid-template-columns: 1fr 1fr;
+            .heroImg2{
+                display: none;
+            }
+        }
     }
 }
     

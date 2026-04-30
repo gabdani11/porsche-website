@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section className='heroSection'>
         <Navbar/>
-        <div className="heroSection">
+        <div className="centerContainer">
           <div className="imgContainer">
           <img className='heroImg1' 
           src="https://ik.imagekit.io/rhuubreuu/porsche-website/cosmos_382284989.webp" alt="heroSectionImg" loading='lazy' />
@@ -18,6 +18,11 @@ const Hero = () => {
           src="https://ik.imagekit.io/rhuubreuu/porsche-website/cosmos_1674367478.webp" alt="heroSectionImg" loading='lazy' />
         </div>
 
+        </div>
+        <div className="subHeading">
+          <h1>Porsche</h1>
+          {/* <img src="/Porsche.svg" alt="Porsche" /> */}
+          <img src="/Porsche.svg" alt="porsche" />
         </div>
         
     </section>
