@@ -37,3 +37,8 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+/* Styles the selection for modern browsers */
+::selection {
+  background-color: #ff0066; /* The highlight color */
+  color: #ffffff;            /* The text color */
+}
