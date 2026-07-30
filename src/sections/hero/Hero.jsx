@@ -31,6 +31,7 @@ const Hero = () => {
       delay: 0.5,
     });
   }, []);
+
   return (
     <section className="heroSection">
       <Navbar />
@@ -64,7 +65,6 @@ const Hero = () => {
       </div>
       <div className="subHeading">
         <h1>Porsche</h1>
-        {/* <img src="/Porsche.svg" alt="Porsche" /> */}
         <img src="/Porsche.svg" alt="porsche" />
       </div>
     </section>
