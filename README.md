@@ -38,7 +38,7 @@ src/
 ### Clone the repository
 
 ```bash
-git clone https://github.com/your-username/porsche-landing-page.git
+git clone https://github.com/gabdani11/porsche-website.git
 ```
 
 ### Navigate to the project
