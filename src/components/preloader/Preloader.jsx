@@ -29,18 +29,9 @@ const Preloader = ({ onComplete }) => {
   }, [onComplete]);
   return (
     <div className="preloader">
-      <div className="loaderBar"></div>
-      <div className="loaderBar"></div>
-      <div className="loaderBar"></div>
-      <div className="loaderBar"></div>
-      <div className="loaderBar"></div>
-      <div className="loaderBar"></div>
-      <div className="loaderBar"></div>
-      <div className="loaderBar"></div>
-      <div className="loaderBar"></div>
-      <div className="loaderBar"></div>
-      <div className="loaderBar"></div>
-      <div className="loaderBar"></div>
+      {Array.from({ length: 12 }).map((_, i) => (
+        <div className="loaderBar" key={i}></div>
+      ))}
     </div>
   );
 };

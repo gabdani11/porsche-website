@@ -23,6 +23,7 @@ const App = () => {
       lenis.destroy();
     };
   }, [loading]);
+
   return (
     <div className="main">
       {/* <Preloader /> */}
