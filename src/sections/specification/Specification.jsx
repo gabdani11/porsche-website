@@ -5,11 +5,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Specification = () => {
   gsap.registerPlugin(ScrollTrigger);
-
   useEffect(() => {
     gsap.from(".porschetopview", {
       scrollTrigger: {
         trigger: ".porschetopview",
+
         start: "30% 80%",
         end: "+=1000",
         scrub: true,
@@ -18,7 +18,8 @@ const Specification = () => {
       duration: 1.5,
       ease: "power2.out",
     });
-  });
+    ScrollTrigger.refresh();
+  }, []);
   return (
     <div className="specification">
       <img

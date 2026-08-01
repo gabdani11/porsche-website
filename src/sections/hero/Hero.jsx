@@ -5,31 +5,46 @@ import gsap from "gsap";
 
 const Hero = () => {
   useEffect(() => {
-    gsap.from(".heroImg1", {
-      duration: 1,
-      x: -100,
-      autoAlpha: 0,
-      ease: "power2.out",
+    const tl = gsap.timeline({
+      defaults: { duration: 1, ease: "power2.out", delay: 0.5 },
     });
-    gsap.from(".heroImg2", {
-      duration: 1,
-      y: -100,
-      autoAlpha: 0,
+
+    tl.from(".heroImg1", {
+      y: -200,
+      opacity: 0,
+      duration: 1.5,
       ease: "power2.out",
-    });
-    gsap.from(".heroImg3", {
-      duration: 1,
-      y: 100,
-      autoAlpha: 0,
-      ease: "power2.out",
-    });
-    gsap.from(".heroImg4", {
-      duration: 1,
-      y: 100,
-      autoAlpha: 0,
-      ease: "power2.out",
-      delay: 0.5,
-    });
+    })
+      .from(
+        ".heroImg2",
+        {
+          y: -200,
+          opacity: 0,
+          duration: 1.5,
+          ease: "power2.out",
+        },
+        "-=1.2",
+      )
+      .from(
+        ".heroImg3",
+        {
+          y: 200,
+          opacity: 0,
+          duration: 1.5,
+          ease: "power2.out",
+        },
+        "-=1.2",
+      )
+      .from(
+        ".heroImg4",
+        {
+          y: 200,
+          opacity: 0,
+          duration: 1.5,
+          ease: "power2.out",
+        },
+        "-=1.2",
+      );
   }, []);
 
   return (

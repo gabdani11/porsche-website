@@ -23,6 +23,7 @@ const imageScroll = () => {
       ease: "none",
       repeat: -1,
     });
+    ScrollTrigger.refresh();
   }, []);
   return (
     <section className="imageScroll">
