@@ -47,7 +47,7 @@ const VideoSection = () => {
       });
     };
 
-    const interval = setInterval(changeWord, 2000);
+    const interval = setInterval(changeWord, 4000);
 
     return () => clearInterval(interval);
   }, []);

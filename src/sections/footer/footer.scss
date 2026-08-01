@@ -1,0 +1,66 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #1c1c1c;
+  .footerTop {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
+    padding: 2rem;
+    .buildWith {
+      font-size: clamp(1rem, 2.5vw, 2rem);
+      align-self: end;
+    }
+    ul {
+      font-size: clamp(1rem, 2.5vw, 2rem);
+      list-style: none;
+      line-height: 2rem;
+    }
+    .craftedBy {
+      font-size: clamp(1rem, 2.5vw, 2rem);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      a {
+        text-decoration: none;
+        color: red;
+        font-size: clamp(1rem, 2.5vw, 2rem);
+      }
+    }
+  }
+  .footerBottom {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    width: 100%;
+    .footerTitle1 {
+      font-family: "Maloney", cursive;
+      font-size: clamp(1rem, 24vw, 20rem);
+      font-weight: 500;
+      color: #fff;
+      position: relative;
+      margin-left: auto;
+      margin-right: -5rem;
+      line-height: 1.1;
+    }
+    .footerBottomContent {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      h2 {
+        font-size: clamp(1rem, 24vw, 20rem);
+        font-family: "Maloney", cursive;
+        font-weight: 500;
+        color: #fff;
+        margin-left: -9rem;
+      }
+      p {
+        font-size: clamp(0.5rem, 2.5vw, 2rem);
+        line-height: 0.9;
+        color: #fff;
+      }
+    }
+  }
+}

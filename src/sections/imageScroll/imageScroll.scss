@@ -1,0 +1,60 @@
+@use "../../assets/fonts/fonts.scss";
+.imageScroll {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  position: relative;
+
+  .imageScrollContainer {
+    display: flex;
+    gap: 1rem;
+    position: absolute;
+    img {
+      width: clamp(10rem, 20vw, 30rem);
+      max-height: 38rem;
+      object-fit: cover;
+    }
+
+    .imageScrollImg {
+      height: clamp(10rem, 25vw, 30rem);
+      object-fit: cover;
+      align-self: center;
+    }
+    .imageScrollImg3 {
+      height: clamp(10rem, 25vw, 30rem);
+      object-fit: cover;
+      align-self: flex-end;
+    }
+  }
+  .logobar {
+    background-color: #1c1c1c;
+    width: fit-content;
+    height: 4rem;
+    position: absolute;
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+    bottom: 10%;
+    svg {
+      width: 2rem;
+      height: 2rem;
+      fill: #fff;
+    }
+    .maloneyFont {
+      font-family: "Maloney", cursive;
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: #fff;
+      margin-left: 1rem;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .imageScroll {
+    height: fit-content;
+    .imageScrollContainer {
+      position: relative;
+    }
+  }
+}

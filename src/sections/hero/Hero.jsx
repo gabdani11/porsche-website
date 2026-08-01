@@ -41,25 +41,25 @@ const Hero = () => {
             className="heroImg1"
             src="https://ik.imagekit.io/rhuubreuu/porsche-website/cosmos_382284989.webp"
             alt="heroSectionImg"
-            loading="lazy"
+            fetchPriority="high"
           />
           <img
             className="heroImg2"
             src="https://ik.imagekit.io/rhuubreuu/porsche-website/cosmos_382284989.webp"
             alt="heroSectionImg"
-            loading="lazy"
+            fetchPriority="high"
           />
           <img
             className="heroImg3"
             src="https://ik.imagekit.io/rhuubreuu/porsche-website/cosmos_1606437539.webp"
             alt="heroSectionImg"
-            loading="lazy"
+            fetchPriority="high"
           />
           <img
             className="heroImg4"
             src="https://ik.imagekit.io/rhuubreuu/porsche-website/cosmos_1674367478.webp"
             alt="heroSectionImg"
-            loading="lazy"
+            fetchPriority="high"
           />
         </div>
       </div>

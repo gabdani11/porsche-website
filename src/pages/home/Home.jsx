@@ -3,8 +3,10 @@ import Hero from "../../sections/hero/Hero.jsx";
 import About from "../../sections/about/About.jsx";
 import Specification from "../../sections/specification/Specification.jsx";
 import VideoSection from "../../sections/videoSection/VideoSection.jsx";
+import ImageScroll from "../../sections/imageScroll/imageScroll.jsx";
 import "./home.scss";
 import gsap from "gsap";
+import Footer from "../../sections/footer/Footer.jsx";
 
 const Home = () => {
   const circleRef = useRef(null);
@@ -30,6 +32,9 @@ const Home = () => {
       <About />
       <Specification />
       <VideoSection />
+      <ImageScroll />
+      <Footer />
+
       <div className="circle" ref={circleRef}>
         911
       </div>
