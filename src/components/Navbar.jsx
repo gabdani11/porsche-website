@@ -52,7 +52,11 @@ const Navbar = () => {
         {isMenuOpen ? (
           <RiCloseLargeFill onClick={handleMenuToggle} size={36} />
         ) : (
-          <RiMenu4Line onClick={handleMenuToggle} size={36} />
+          <RiMenu4Line
+            className="menuBtn"
+            onClick={handleMenuToggle}
+            size={36}
+          />
         )}
       </div>
       <div className="menuTransition">
@@ -70,12 +74,32 @@ const Navbar = () => {
           color="red"
         />
         <ul>
-          <li onMouseEnter={onHover}>Models</li>
           <li onMouseEnter={onHover}>
-            <a href="#">LinkedIn</a>
+            <a
+              href="https://github.com/gabdani11"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
           </li>
           <li onMouseEnter={onHover}>
-            <a href="#">Twitter</a>
+            <a
+              href="https://www.linkedin.com/in/daniel-prakash1/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+          </li>
+          <li onMouseEnter={onHover}>
+            <a
+              href="https://x.com/devdaniis"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Twitter
+            </a>
           </li>
           <li onMouseEnter={onHover}>
             <a

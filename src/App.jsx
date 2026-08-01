@@ -1,13 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import "./app.scss";
 import Home from "./pages/home/Home.jsx";
 import Lenis from "lenis";
 import Preloader from "./components/preloader/Preloader.jsx";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
+  const handlePreloaderComplete = useCallback(() => {
+    setLoading(false);
+  }, []);
   useEffect(() => {
     if (loading) return;
+    ScrollTrigger.refresh();
     const lenis = new Lenis();
 
     let rafId;
@@ -27,7 +32,7 @@ const App = () => {
   return (
     <div className="main">
       {/* <Preloader /> */}
-      {loading && <Preloader onComplete={() => setLoading(false)} />}
+      {loading && <Preloader onComplete={handlePreloaderComplete} />}
       <Home />
     </div>
   );

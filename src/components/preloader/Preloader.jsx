@@ -4,29 +4,29 @@ import "./preloader.scss";
 
 const Preloader = ({ onComplete }) => {
   useEffect(() => {
-    const playAnimation = () => {
-      const tl = gsap.timeline({
-        onComplete: onComplete,
-      });
+  let tl; // declared here, in scope for both playAnimation AND cleanup
 
-      tl.to(".loaderBar", {
-        x: "100%",
-        duration: 1,
-        stagger: 0.1,
-        ease: "power2.inOut",
-      });
-    };
+  const playAnimation = () => {
+    tl = gsap.timeline({ onComplete });
+    tl.to(".loaderBar", {
+      x: "100%",
+      duration: 1,
+      stagger: 0.1,
+      ease: "power2.inOut",
+    });
+  };
 
-    if (document.readyState === "complete") {
-      playAnimation();
-    } else {
-      window.addEventListener("load", playAnimation);
-    }
+  if (document.readyState === "complete") {
+    playAnimation();
+  } else {
+    window.addEventListener("load", playAnimation);
+  }
 
-    return () => {
-      window.removeEventListener("load", playAnimation);
-    };
-  }, [onComplete]);
+  return () => {
+    window.removeEventListener("load", playAnimation);
+    tl?.kill();
+  };
+}, [onComplete]);
   return (
     <div className="preloader">
       {Array.from({ length: 12 }).map((_, i) => (
