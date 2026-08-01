@@ -17,6 +17,7 @@
     }
     div {
       padding: 1rem;
+      overflow: hidden;
       span {
         font-size: clamp(0.5rem, 2vw, 3rem);
       }

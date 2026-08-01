@@ -1,8 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./videosection.scss";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const VideoSection = () => {
+  gsap.registerPlugin(ScrollTrigger);
   const words = [
     "The Ultimatum",
     "Ascension",
@@ -49,6 +51,29 @@ const VideoSection = () => {
 
     const interval = setInterval(changeWord, 4000);
 
+    gsap.from(".tiresBackside", {
+      scrollTrigger: {
+        trigger: ".tiresBackside",
+        start: "top 80%",
+        end: "+=1000",
+        scrub: true,
+      },
+      x: -200,
+      duration: 1.5,
+      ease: "power2.out",
+    });
+    gsap.from(".backsidecar", {
+      scrollTrigger: {
+        trigger: ".tiresBackside",
+        start: "top 80%",
+        end: "+=1000",
+        scrub: true,
+      },
+      x: 200,
+      duration: 1.5,
+      ease: "power2.out",
+    });
+
     return () => clearInterval(interval);
   }, []);
 
@@ -60,15 +85,17 @@ const VideoSection = () => {
           src="https://ik.imagekit.io/rhuubreuu/porsche-website/shape1.webp?updatedAt=1778355034229"
           alt="backgroundShape"
         />
-        <div className="imageFlex">
+        <div className="imageFlex ">
           <div>
             <img
+              className="tiresBackside"
               src="https://ik.imagekit.io/rhuubreuu/porsche-website/tireimg.webp?updatedAt=1778355033842"
               alt="tires"
             />
           </div>
           <div>
             <img
+              className="backsidecar"
               src="https://ik.imagekit.io/rhuubreuu/porsche-website/porscheback.webp?updatedAt=1778355033811"
               alt="backsidecar"
             />
