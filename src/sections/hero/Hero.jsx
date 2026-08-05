@@ -54,33 +54,45 @@ const Hero = () => {
         <div className="imgContainer">
           <img
             className="heroImg1"
-            src="https://ik.imagekit.io/rhuubreuu/porsche-website/cosmos_382284989.webp"
-            alt="heroSectionImg"
-            fetchPriority="high"
+            src="https://res.cloudinary.com/j7kdhzei/image/upload/w_auto,dpr_auto,q_auto,f_auto/v1785604086/cosmos_382284989_1_1_qm75hf.webp"
+            alt="porsche hero image"
+            fetchpriority="high"
+            decoding="async"
+            width={1080}
+            height={1350}
           />
           <img
             className="heroImg2"
-            src="https://ik.imagekit.io/rhuubreuu/porsche-website/cosmos_382284989.webp"
-            alt="heroSectionImg"
-            fetchPriority="high"
+            src="https://res.cloudinary.com/j7kdhzei/image/upload/w_auto,dpr_auto,q_auto,f_auto/v1785604086/cosmos_382284989_1_1_qm75hf.webp"
+            alt="porsche hero image"
+            fetchpriority="high"
+            decoding="async"
+            width={1080}
+            height={1350}
           />
           <img
             className="heroImg3"
-            src="https://ik.imagekit.io/rhuubreuu/porsche-website/cosmos_1606437539.webp"
+            src="https://res.cloudinary.com/j7kdhzei/image/upload/v1785604435/cosmos_1606437539_1_u50ovi.webp"
             alt="heroSectionImg"
-            fetchPriority="high"
+            fetchpriority="high"
+            decoding="async"
+            width={1080}
+            height={1080}
           />
           <img
             className="heroImg4"
-            src="https://ik.imagekit.io/rhuubreuu/porsche-website/cosmos_1674367478.webp"
+            src="https://res.cloudinary.com/j7kdhzei/image/upload/v1785604435/cosmos_1674367478_1_hbd6p4.webp"
             alt="heroSectionImg"
-            fetchPriority="high"
+            fetchpriority="high"
+            decoding="async"
+            width={1080}
+            height={1080}
           />
         </div>
       </div>
       <div className="subHeading">
         <h1>Porsche</h1>
-        <img src="/Porsche.svg" alt="porsche" />
+        <h2 className="heroTitlestyle">Porsche</h2>
       </div>
     </section>
   );

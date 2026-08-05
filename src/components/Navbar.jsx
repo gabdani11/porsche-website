@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { RiMenu4Line, RiCloseLargeFill } from "@remixicon/react";
+import { Menu, X } from "lucide-react";
 import "./navbar.scss";
 import gsap from "gsap";
 
@@ -50,13 +50,9 @@ const Navbar = () => {
       <h4>911</h4>
       <div className="menuBtn">
         {isMenuOpen ? (
-          <RiCloseLargeFill onClick={handleMenuToggle} size={36} />
+          <X onClick={handleMenuToggle} size={36} />
         ) : (
-          <RiMenu4Line
-            className="menuBtn"
-            onClick={handleMenuToggle}
-            size={36}
-          />
+          <Menu className="menuBtn" onClick={handleMenuToggle} size={36} />
         )}
       </div>
       <div className="menuTransition">
@@ -68,11 +64,7 @@ const Navbar = () => {
         className="navigation"
         style={{ display: isMenuOpen ? "flex" : "none" }}
       >
-        <RiCloseLargeFill
-          onClick={handleMenuToggle}
-          className="closeBtn"
-          color="red"
-        />
+        <X onClick={handleMenuToggle} className="closeBtn" color="red" />
         <ul>
           <li onMouseEnter={onHover}>
             <a

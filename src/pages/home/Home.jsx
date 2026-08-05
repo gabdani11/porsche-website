@@ -11,28 +11,36 @@ import Footer from "../../sections/footer/Footer.jsx";
 const Home = () => {
   const circleRef = useRef(null);
   useEffect(() => {
+    const xTo = gsap.quickTo(circleRef.current, "x", {
+      duration: 0.3,
+      ease: "power3.out",
+    });
+
+    const yTo = gsap.quickTo(circleRef.current, "y", {
+      duration: 0.3,
+      ease: "power3.out",
+    });
+
     const handleMouseMove = (e) => {
-      gsap.to(circleRef.current, {
-        x: e.clientX,
-        y: e.clientY,
-        duration: 2,
-        scale: 0.5,
-        ease: "elastic.out(1, 0.3)",
-      });
+      xTo(e.clientX);
+      yTo(e.clientY);
     };
+
     window.addEventListener("mousemove", handleMouseMove);
+
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
-
   return (
     <>
-      <Hero />
-      <About />
-      <Specification />
-      <VideoSection />
-      <ImageScroll />
+      <main>
+        <Hero />
+        <About />
+        <Specification />
+        <VideoSection />
+        <ImageScroll />
+      </main>
       <Footer />
 
       <div className="circle" ref={circleRef}>

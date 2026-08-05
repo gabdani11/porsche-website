@@ -13,6 +13,7 @@ const Specification = () => {
         start: "30% 80%",
         end: "+=1000",
         scrub: true,
+        
       },
       x: 500,
       duration: 1.5,
@@ -41,8 +42,12 @@ const Specification = () => {
     <div className="specification">
       <img
         className="porschetopview"
-        src="https://ik.imagekit.io/rhuubreuu/porsche-website/911%20GT3%20RS%20(1)-Photoroom.webp?updatedAt=1777879032018"
-        alt="porschetopview"
+        src="https://res.cloudinary.com/j7kdhzei/image/upload/v1785604435/911_GT3_RS_1_-Photoroom_1_eop2jg.webp"
+        alt="Porsche 911 GT3 RS Top View"
+        loading="lazy"
+        decoded="async"
+        width={1920}
+        height={1080}
       />
       <div className="specGrid">
         <div className="box1 ">

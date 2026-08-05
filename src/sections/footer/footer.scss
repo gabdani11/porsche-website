@@ -1,10 +1,12 @@
-footer {
+@mixin flex($direction: row) {
   display: flex;
-  flex-direction: column;
+  flex-direction: $direction;
+}
+footer {
+  @include flex(column);
   background-color: #1c1c1c;
   .footerTop {
-    display: flex;
-    flex-direction: column;
+    @include flex(column);
     width: 100%;
     gap: 2rem;
     padding: 2rem;
@@ -19,7 +21,7 @@ footer {
     }
     .craftedBy {
       font-size: clamp(1rem, 2.5vw, 2rem);
-      display: flex;
+      @include flex();
       align-items: center;
       justify-content: space-between;
       a {
@@ -30,8 +32,7 @@ footer {
     }
   }
   .footerBottom {
-    display: flex;
-    flex-direction: column;
+    @include flex(column);
     overflow-x: hidden;
     width: 100%;
     .footerTitle1 {
@@ -45,7 +46,7 @@ footer {
       line-height: 1.1;
     }
     .footerBottomContent {
-      display: flex;
+      @include flex();
       align-items: center;
       justify-content: space-between;
 

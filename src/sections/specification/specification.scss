@@ -1,8 +1,10 @@
 .specification {
   overflow: hidden;
+  width: 100%;
 
-  > img {
+  .porschetopview {
     width: 100%;
+    height: 100%;
   }
   .specGrid {
     display: grid;

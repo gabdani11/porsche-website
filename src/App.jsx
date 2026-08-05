@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useCallback } from "react";
-import "./app.scss";
 import Home from "./pages/home/Home.jsx";
 import Lenis from "lenis";
 import Preloader from "./components/preloader/Preloader.jsx";
@@ -12,7 +11,6 @@ const App = () => {
   }, []);
   useEffect(() => {
     if (loading) return;
-    ScrollTrigger.refresh();
     const lenis = new Lenis();
 
     let rafId;
@@ -23,6 +21,7 @@ const App = () => {
     }
 
     requestAnimationFrame(raf);
+    ScrollTrigger.refresh();
     return () => {
       cancelAnimationFrame(rafId);
       lenis.destroy();

@@ -37,8 +37,12 @@ const About = () => {
       <div className="carImageContainer">
         <img
           className="aboutPorscheImg"
-          src="https://ik.imagekit.io/rhuubreuu/porsche-website/1396149%201.webp"
-          alt="Porschecar"
+          src="https://res.cloudinary.com/j7kdhzei/image/upload/v1785604434/1396149_1_1_mwrahp.webp"
+          alt="Porsche Car Top View"
+          loading="lazy"
+          decoded="async"
+          width={1713}
+          height={1509}
         />
         <img className="frame1Img" src="/frame1.webp" alt="blackframe" />
         <h4 id="aboutBottomTitle">
